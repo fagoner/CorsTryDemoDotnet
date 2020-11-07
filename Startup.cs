@@ -38,7 +38,6 @@ namespace CorsTry
                         builder
                             .WithOrigins("https://www.rfarma.net")
                             .WithMethods("GET", "POST")
-                            .AllowAnyHeader();
                     });
             });
 
@@ -49,6 +48,7 @@ namespace CorsTry
                     builder =>
                     {
                         builder.AllowAnyOrigin()
+                            .SetIsOriginAllowed((host) => true)
                             .AllowAnyHeader()
                             .AllowAnyMethod();
                     }
