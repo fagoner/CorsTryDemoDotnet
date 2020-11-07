@@ -1,5 +1,3 @@
-using CorsTry.Models;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CorsTry.Controllers

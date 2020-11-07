@@ -1,5 +1,4 @@
 using CorsTry.Models;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CorsTry.Controllers
@@ -9,7 +8,6 @@ namespace CorsTry.Controllers
     [Route("[controller]")]
     public class MessageController : ControllerBase
     {
-
 
         [HttpPost]
         public ActionResult PostMessage([FromBody] Message message)
