@@ -49,7 +49,7 @@ namespace CorsTry
             app.UseRouting();
             // app.UseCors();
              app.UseCors(x => x
-                .SetIsOriginAllowed(origin => true)
+                // .SetIsOriginAllowed(origin => true)
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
