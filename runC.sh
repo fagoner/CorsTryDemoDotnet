@@ -1,5 +1,5 @@
 git checkout . || true
-git pull origin master || true
+git pull origin main || true
 
 docker stop cors || true
 docker rm cors || true
