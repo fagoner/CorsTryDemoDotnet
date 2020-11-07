@@ -48,9 +48,9 @@ namespace CorsTry
                     builder =>
                     {
                         builder.AllowAnyOrigin()
-                            .SetIsOriginAllowed((host) => true)
+                            // .SetIsOriginAllowed((host) => true)
                             .AllowAnyHeader()
-                            .AllowCredentials()
+                            // .AllowCredentials()
                             .AllowAnyMethod();
                     }
                 );
