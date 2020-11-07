@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CorsTry.Controllers
@@ -8,6 +9,7 @@ namespace CorsTry.Controllers
     public class ValuesController : ControllerBase
     {
         
+        [EnableCors("Open")]
         [HttpGet]
         public ActionResult Ping()
         {
