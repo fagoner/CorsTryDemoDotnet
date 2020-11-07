@@ -36,8 +36,9 @@ namespace CorsTry
                         name: "Open",
                         builder => {
                             builder.AllowAnyOrigin().
-                                AllowAnyHeader().
-                                AllowAnyMethod();
+                                AllowAnyMethod().
+                                AllowAnyHeader()
+                                ;
                         }
                     );
                 }

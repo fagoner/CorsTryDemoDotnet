@@ -1,9 +1,9 @@
 console.log("Hi dude!");
 
 
-fetch("http://159.89.236.194:5000/values", {
+fetch("http://da:5000/values", {
     method: 'GET', // or 'PUT'
-    // credentials: "include",
+    credentials: "include",
     // body: JSON.stringify(messageBody), // data can be `string` or {object}!
     headers:{
       'Content-Type': 'application/json'
