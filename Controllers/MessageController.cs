@@ -8,7 +8,7 @@ namespace CorsTry.Controllers
     [Route("[controller]")]
     public class MessageController : ControllerBase
     {
-
+        [EnableCors("Rf")]
         [HttpPost]
         public ActionResult PostMessage([FromBody] Message message)
         {
