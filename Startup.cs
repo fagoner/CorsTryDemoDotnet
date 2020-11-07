@@ -50,6 +50,7 @@ namespace CorsTry
                         builder.AllowAnyOrigin()
                             .SetIsOriginAllowed((host) => true)
                             .AllowAnyHeader()
+                            .AllowCredentials()
                             .AllowAnyMethod();
                     }
                 );
