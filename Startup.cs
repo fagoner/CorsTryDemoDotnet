@@ -30,7 +30,18 @@ namespace CorsTry
         public void ConfigureServices(IServiceCollection services)
         {
            
-            services.AddCors();
+            services.AddCors(
+                options => {
+                    options.AddPolicy(
+                        name: "Open",
+                        builder => {
+                            builder.AllowAnyOrigin().
+                                AllowAnyHeader().
+                                AllowAnyMethod();
+                        }
+                    );
+                }
+            );
             services.AddControllers();
 
         }
@@ -47,13 +58,7 @@ namespace CorsTry
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            // app.UseCors();
-             app.UseCors(x => x
-                // .SetIsOriginAllowed(origin => true)
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowCredentials());
-
+            app.UseCors();
 
             app.UseAuthorization();
 
