@@ -37,7 +37,7 @@ namespace CorsTry
                     {
                         builder
                             .WithOrigins("https://www.rfarma.net")
-                            .WithMethods("GET", "POST")
+                            .WithMethods("GET", "POST");
                     });
             });
 
