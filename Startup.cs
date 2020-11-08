@@ -51,9 +51,8 @@ namespace CorsTry
                         name: "Rf",
                         builder => {
                             builder.WithOrigins("https://www.rfarma.net").
-                                AllowAnyMethod().
-                                AllowAnyHeader()
-                                ;
+                                WithMethods("GET").
+                                AllowAnyHeader();
                         }
                     );
                 }
