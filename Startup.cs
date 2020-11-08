@@ -45,19 +45,19 @@ namespace CorsTry
                 }
             );
 
-            // services.AddCors(
-            //     options => {
-            //         options.AddPolicy(
-            //             name: "Rf",
-            //             builder => {
-            //                 builder.WithOrigins("https://www.rfarma.net").
-            //                     AllowAnyMethod().
-            //                     AllowAnyHeader()
-            //                     ;
-            //             }
-            //         );
-            //     }
-            // );
+            services.AddCors(
+                options => {
+                    options.AddPolicy(
+                        name: "Rf",
+                        builder => {
+                            builder.WithOrigins("https://www.rfarma.net").
+                                AllowAnyMethod().
+                                AllowAnyHeader()
+                                ;
+                        }
+                    );
+                }
+            );
             services.AddControllers();
 
         }
