@@ -30,12 +30,14 @@ namespace CorsTry
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
+
             services.AddCors(
-                options => {
+                options =>
+                {
                     options.AddPolicy(
                         name: "Open",
-                        builder => {
+                        builder =>
+                        {
                             builder.AllowAnyOrigin().
                                 AllowAnyMethod().
                                 AllowAnyHeader()
@@ -46,10 +48,12 @@ namespace CorsTry
             );
 
             services.AddCors(
-                options => {
+                options =>
+                {
                     options.AddPolicy(
                         name: "Rf",
-                        builder => {
+                        builder =>
+                        {
                             builder.WithOrigins("https://www.rfarma.net").
                                 WithMethods("GET").
                                 AllowAnyHeader();
@@ -64,10 +68,10 @@ namespace CorsTry
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-{
-    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-});
+            // app.UseForwardedHeaders(new ForwardedHeadersOptions
+            // {
+            //     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            // });
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
