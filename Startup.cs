@@ -30,33 +30,33 @@ namespace CorsTry
         public void ConfigureServices(IServiceCollection services)
         {
            
-            services.AddCors(
-                options => {
-                    options.AddPolicy(
-                        name: "Open",
-                        builder => {
-                            builder.AllowAnyOrigin().
-                                AllowAnyMethod().
-                                AllowAnyHeader()
-                                ;
-                        }
-                    );
-                }
-            );
+            // services.AddCors(
+            //     options => {
+            //         options.AddPolicy(
+            //             name: "Open",
+            //             builder => {
+            //                 builder.AllowAnyOrigin().
+            //                     AllowAnyMethod().
+            //                     AllowAnyHeader()
+            //                     ;
+            //             }
+            //         );
+            //     }
+            // );
 
-            services.AddCors(
-                options => {
-                    options.AddPolicy(
-                        name: "Rf",
-                        builder => {
-                            builder.WithOrigins("https://www.rfarma.net").
-                                AllowAnyMethod().
-                                AllowAnyHeader()
-                                ;
-                        }
-                    );
-                }
-            );
+            // services.AddCors(
+            //     options => {
+            //         options.AddPolicy(
+            //             name: "Rf",
+            //             builder => {
+            //                 builder.WithOrigins("https://www.rfarma.net").
+            //                     AllowAnyMethod().
+            //                     AllowAnyHeader()
+            //                     ;
+            //             }
+            //         );
+            //     }
+            // );
             services.AddControllers();
 
         }
@@ -73,10 +73,9 @@ namespace CorsTry
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors();
+            // app.UseCors();
 
             app.UseAuthorization();
-
 
             app.UseEndpoints(endpoints =>
             {

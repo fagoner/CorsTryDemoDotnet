@@ -9,7 +9,7 @@ namespace CorsTry.Controllers
     public class ValuesController : ControllerBase
     {
         
-        [EnableCors("Open")]
+        // [EnableCors("Open")]
         [HttpGet]
         public ActionResult Ping()
         {
