@@ -80,5 +80,13 @@ server {
     }
 }
 ```
+#### Check Nginx Configuration
 
+```
+nginx -t
+```
 
+#### Reload nginx 
+```
+sudo nginx -s reload
+```
